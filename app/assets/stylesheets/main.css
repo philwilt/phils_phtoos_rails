@@ -1,0 +1,11 @@
+#nav {
+  align-items: center;
+  display: flex;
+  position: fixed;
+  padding: 6px;
+  justify-content: space-between;
+  width: 100%;
+
+  #nav--signout {
+  }
+}

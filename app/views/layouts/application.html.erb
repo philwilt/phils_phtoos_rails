@@ -20,12 +20,15 @@
     <%# Includes all stylesheet files in app/assets/stylesheets %>
     <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "https://cdn.simplecss.org/simple.css" %>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+
 
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
-    <%= button_to "Sign out", session_path, method: :delete if authenticated? %>
+    <%= render "layouts/nav" %>
     <%= yield %>
   </body>
 </html>

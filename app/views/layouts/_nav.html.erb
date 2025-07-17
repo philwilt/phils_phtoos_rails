@@ -1,0 +1,6 @@
+<div id="nav">
+  <div data-controller="nav">
+    <%= fa_icon("bars", id: "nav--menu", data: { "target": "nav.button", action: "click->nav#toggle" }) %>
+  </div>
+  <%= button_to "Sign out", session_path, method: :delete, id: "nav--signout" if authenticated?  %>
+</div>

@@ -4,6 +4,12 @@ import "controllers"
 
 import "trix"
 import "@rails/actiontext"
+// require "../nav.js"
 
 import LocalTime from "local-time"
 LocalTime.start()
+
+document.addEventListener('turbolinks:load',function() {
+  console.log('ran')
+  console.log(document.querySelector("#nav"))
+});
