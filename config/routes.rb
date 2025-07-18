@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :collections
+  resources :photos
   resource :session
   resources :passwords, param: :token
   resources :posts do

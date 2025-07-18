@@ -8,8 +8,3 @@ import "@rails/actiontext"
 
 import LocalTime from "local-time"
 LocalTime.start()
-
-document.addEventListener('turbolinks:load',function() {
-  console.log('ran')
-  console.log(document.querySelector("#nav"))
-});

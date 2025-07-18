@@ -8,6 +8,10 @@
 
   #nav--pane {
     position: fixed;
+
+    ul {
+      list-style: none;
+    }
   }
 
   #nav--signout {

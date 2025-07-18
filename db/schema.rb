@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_07_16_200960) do
+ActiveRecord::Schema[8.0].define(version: 2025_07_18_190443) do
   create_table "action_text_rich_texts", force: :cascade do |t|
     t.string "name", null: false
     t.text "body"
@@ -49,12 +49,29 @@ ActiveRecord::Schema[8.0].define(version: 2025_07_16_200960) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
+  create_table "collections", force: :cascade do |t|
+    t.text "name"
+    t.text "decription"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "comments", force: :cascade do |t|
     t.integer "post_id", null: false
     t.text "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["post_id"], name: "index_comments_on_post_id"
+  end
+
+  create_table "photos", force: :cascade do |t|
+    t.text "description"
+    t.string "name"
+    t.string "location"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "collection_id"
+    t.index ["collection_id"], name: "index_photos_on_collection_id"
   end
 
   create_table "posts", force: :cascade do |t|
@@ -84,5 +101,6 @@ ActiveRecord::Schema[8.0].define(version: 2025_07_16_200960) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "comments", "posts"
+  add_foreign_key "photos", "collections"
   add_foreign_key "sessions", "users"
 end
