@@ -1,6 +1,11 @@
 <div id="nav">
   <div data-controller="nav">
-    <%= fa_icon("bars", id: "nav--menu", data: { "target": "nav.button", action: "click->nav#toggle" }) %>
+    <%= fa_icon("bars", id: "nav--menu", data: { "nav-target": "button", action: "click->nav#toggle" }) %>
+    <div id="nav--pane" data-nav-target="pane">
+      <ul >
+        <li class="nav--item">Posts</li>
+      </ul>
+    </div>
   </div>
   <%= button_to "Sign out", session_path, method: :delete, id: "nav--signout" if authenticated?  %>
 </div>
