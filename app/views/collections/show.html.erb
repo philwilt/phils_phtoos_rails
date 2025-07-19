@@ -1,10 +1,11 @@
 <p style="color: green"><%= notice %></p>
+<div class="collection">
+  <%= render @collection %>
 
-<%= render @photo %>
+  <div>
+    <%= link_to "Edit this collection", edit_collection_path(@collection) %> |
+    <%= link_to "Back to collections", collections_path %>
 
-<div>
-  <%= link_to "Edit this photo", edit_photo_path(@photo) %> |
-  <%= link_to "Back to photos", photos_path %>
-
-  <%= button_to "Destroy this photo", @photo, method: :delete %>
+    <%= button_to "Destroy this collection", @collection, method: :delete %>
+  </div>
 </div>

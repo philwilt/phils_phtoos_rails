@@ -3,7 +3,7 @@
     <%= fa_icon("bars", id: "nav--menu", data: { "nav-target": "button", action: "click->nav#toggle" }) %>
     <div id="nav--pane" data-nav-target="pane">
       <ul >
-        <li class="nav--item"><%= link_to("Photo Gallery", photos_path) %></li>
+        <li class="nav--item"><%= link_to("Photo Gallery", collections_path) %></li>
         <li class="nav--item"><%= link_to("Blog", posts_path) %></li>
       </ul>
     </div>

@@ -1,16 +1,13 @@
 <p style="color: green"><%= notice %></p>
 
-<% content_for :title, "Photos" %>
+<% content_for :title, "Photography collections" %>
 
-<h1>Photos</h1>
+<h1>Photography collections</h1>
 
-<div id="photos">
-  <% @photos.each do |photo| %>
-    <%= render photo %>
-    <p>
-      <%= link_to "Show this photo", photo %>
-    </p>
+<div id="collections">
+  <% @collections.each do |collection| %>
+      <%= render collection %>
   <% end %>
 </div>
 
-<%= link_to "New photo", new_photo_path %>
+<%= link_to "New collection", new_collection_path %>

@@ -1,12 +1,12 @@
-<% content_for :title, "Editing photo" %>
+<% content_for :title, "Editing collection" %>
 
-<h1>Editing photo</h1>
+<h1>Editing collection</h1>
 
-<%= render "form", photo: @photo %>
+<%= render "form", collection: @collection %>
 
 <br>
 
 <div>
-  <%= link_to "Show this photo", @photo %> |
-  <%= link_to "Back to photos", photos_path %>
+  <%= link_to "Show this collection", @collection %> |
+  <%= link_to "Back to collections", collections_path %>
 </div>

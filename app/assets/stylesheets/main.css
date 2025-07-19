@@ -17,3 +17,17 @@
   #nav--signout {
   }
 }
+
+#collections {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  .collection {
+    margin-bottom: 16px;
+    flex: 0 0 auto;
+    width: 30%;
+    padding: 12px;
+    background-color: green;
+  }
+}
